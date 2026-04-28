@@ -1,0 +1,153 @@
+/* ============================================
+   MERIDIAN — Button Component
+   ============================================ */
+
+.meridian-btn {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             var(--spacing-2);
+  border:          1.5px solid transparent;
+  border-radius:   var(--radius-md);
+  font-family:     var(--font-family);
+  font-weight:     var(--font-weight-medium);
+  line-height:     var(--line-height-normal);
+  cursor:          pointer;
+  white-space:     nowrap;
+  transition:      background var(--transition-fast),
+                   border-color var(--transition-fast),
+                   box-shadow var(--transition-fast),
+                   opacity var(--transition-fast);
+  text-decoration: none;
+  user-select:     none;
+}
+
+/* ── Sizes ── */
+.meridian-btn--sm {
+  padding:   var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  height:    30px;
+}
+.meridian-btn--md {
+  padding:   10px var(--spacing-4);
+  font-size: var(--font-size-sm);
+  height:    38px;
+}
+.meridian-btn--lg {
+  padding:   var(--spacing-3) var(--spacing-5);
+  font-size: var(--font-size-base);
+  height:    46px;
+}
+
+/* ── Full width ── */
+.meridian-btn--full {
+  width: 100%;
+}
+
+/* ── Primary ── */
+.meridian-btn--primary {
+  background:   var(--color-primary-500);
+  border-color: var(--color-primary-500);
+  color:        var(--color-neutral-0);
+  box-shadow:   var(--shadow-sm);
+}
+.meridian-btn--primary:hover:not(:disabled) {
+  background:   var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  box-shadow:   var(--shadow-md);
+}
+.meridian-btn--primary:active:not(:disabled) {
+  background:   var(--color-primary-700);
+  border-color: var(--color-primary-700);
+  box-shadow:   none;
+}
+
+/* ── Secondary ── */
+.meridian-btn--secondary {
+  background:   var(--color-neutral-0);
+  border-color: var(--color-neutral-200);
+  color:        var(--color-neutral-900);
+  box-shadow:   var(--shadow-sm);
+}
+.meridian-btn--secondary:hover:not(:disabled) {
+  background:   var(--color-neutral-50);
+  border-color: var(--color-neutral-400);
+  box-shadow:   var(--shadow-md);
+}
+.meridian-btn--secondary:active:not(:disabled) {
+  background:   var(--color-neutral-100);
+  box-shadow:   none;
+}
+
+/* ── Ghost ── */
+.meridian-btn--ghost {
+  background:   transparent;
+  border-color: transparent;
+  color:        var(--color-primary-500);
+}
+.meridian-btn--ghost:hover:not(:disabled) {
+  background:   var(--color-primary-50);
+  border-color: var(--color-primary-100);
+}
+.meridian-btn--ghost:active:not(:disabled) {
+  background: var(--color-primary-100);
+}
+
+/* ── Destructive ── */
+.meridian-btn--destructive {
+  background:   var(--color-error-500);
+  border-color: var(--color-error-500);
+  color:        var(--color-neutral-0);
+  box-shadow:   var(--shadow-sm);
+}
+.meridian-btn--destructive:hover:not(:disabled) {
+  background:   var(--color-error-700);
+  border-color: var(--color-error-700);
+  box-shadow:   var(--shadow-md);
+}
+.meridian-btn--destructive:active:not(:disabled) {
+  background: #991B1B;
+  box-shadow: none;
+}
+
+/* ── Disabled state ── */
+.meridian-btn:disabled {
+  opacity: 0.45;
+  cursor:  not-allowed;
+}
+
+/* ── Loading state ── */
+.meridian-btn--loading {
+  cursor: wait;
+}
+.meridian-btn__spinner {
+  width:         14px;
+  height:        14px;
+  border:        2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: var(--radius-full);
+  animation:     meridian-spin 600ms linear infinite;
+  flex-shrink:   0;
+}
+@keyframes meridian-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Icons ── */
+.meridian-btn__icon {
+  display:     inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.meridian-btn__icon svg {
+  width:  16px;
+  height: 16px;
+}
+.meridian-btn--sm .meridian-btn__icon svg {
+  width:  14px;
+  height: 14px;
+}
+.meridian-btn--lg .meridian-btn__icon svg {
+  width:  18px;
+  height: 18px;
+}

@@ -1,0 +1,52 @@
+/* ============================================
+   MERIDIAN — Badge Component
+   ============================================ */
+
+.meridian-badge {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            var(--spacing-1);
+  padding:        2px var(--spacing-2);
+  border-radius:  var(--radius-sm);
+  font-family:    var(--font-family);
+  font-size:      var(--font-size-xs);
+  font-weight:    var(--font-weight-medium);
+  line-height:    var(--line-height-normal);
+  white-space:    nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* ── Variants ── */
+.meridian-badge--default {
+  background: var(--color-neutral-100);
+  color:      var(--color-neutral-600);
+}
+.meridian-badge--primary {
+  background: var(--color-primary-50);
+  color:      var(--color-primary-700);
+}
+.meridian-badge--success {
+  background: var(--color-success-50);
+  color:      var(--color-success-700);
+}
+.meridian-badge--warning {
+  background: var(--color-warning-50);
+  color:      var(--color-warning-700);
+}
+.meridian-badge--error {
+  background: var(--color-error-50);
+  color:      var(--color-error-700);
+}
+
+/* ── Dot indicator ── */
+.meridian-badge__dot {
+  width:         6px;
+  height:        6px;
+  border-radius: var(--radius-full);
+  flex-shrink:   0;
+}
+.meridian-badge--default  .meridian-badge__dot { background: var(--color-neutral-400); }
+.meridian-badge--primary  .meridian-badge__dot { background: var(--color-primary-500); }
+.meridian-badge--success  .meridian-badge__dot { background: var(--color-success-500); }
+.meridian-badge--warning  .meridian-badge__dot { background: var(--color-warning-500); }
+.meridian-badge--error    .meridian-badge__dot { background: var(--color-error-500);   }
