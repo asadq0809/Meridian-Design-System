@@ -4,17 +4,17 @@ A token-based design system built in React — mapping 1:1 from Figma Variables 
 
 Built by **Asad Qureshi** as a portfolio case study demonstrating design-to-development ownership.
 
-🎨 [Figma File](YOUR_FIGMA_LINK_HERE) · 🚀 [Live Demo](YOUR_VERCEL_LINK_HERE)
+🎨 [Figma File](https://www.figma.com/design/0bQi0Tq5rd1yyJvumvjtzk/Meridian-Design-System?node-id=0-1&t=TNxMxl2DJCT9WFRJ-1) · 🚀 [Live Demo](https://meridian-design-system-pearl.vercel.app/)
 
 ---
 
 ## Components
 
-| Component | Variants | States |
-|-----------|----------|--------|
-| Button | primary, secondary, ghost, destructive | default, hover, active, disabled, loading |
-| Badge | default, primary, success, warning, error | default, with dot indicator |
-| Alert | info, success, warning, error | default, dismissible, title-only, body-only |
+| Component | Variants                                  | States                                      |
+| --------- | ----------------------------------------- | ------------------------------------------- |
+| Button    | primary, secondary, ghost, destructive    | default, hover, active, disabled, loading   |
+| Badge     | default, primary, success, warning, error | default, with dot indicator                 |
+| Alert     | info, success, warning, error             | default, dismissible, title-only, body-only |
 
 ---
 
@@ -23,9 +23,9 @@ Built by **Asad Qureshi** as a portfolio case study demonstrating design-to-deve
 All design decisions live in `tokens.css` as CSS custom properties, mirroring Figma Variables exactly:
 
 ```css
---color-primary-500: #2563EB;   /* Figma: color/primary/500 */
---spacing-4: 16px;              /* Figma: spacing/4         */
---radius-md: 8px;               /* Figma: radius/md         */
+--color-primary-500: #2563eb; /* Figma: color/primary/500 */
+--spacing-4: 16px; /* Figma: spacing/4         */
+--radius-md: 8px; /* Figma: radius/md         */
 ```
 
 This means any token change in Figma propagates to code by updating one value in one file.
